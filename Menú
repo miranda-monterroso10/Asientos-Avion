@@ -1,0 +1,84 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main (nulo) {
+	int opcion = 0, uno = 0, dos = 0, vuelo = 0;
+	printf ("\ nBienvenido al MIALv001! \ n");
+	printf ("\ n \ n");
+        
+        printf ("En que puedo ayudar? \ n");
+        printf ("\ n \ n");
+        printf ("Ingrese el numero de vuelo: \ n");
+        scanf ("% d", & vuelo);
+		printf ("VUELO: MIAL% d \ n \ n", vuelo);
+	hacer{
+		pantalla clara vacía ()
+{
+    sistema ("@ cls || clear");
+}
+        
+		printf ("MENÚ DE OPCIONES \ n \ n");
+		printf ("\ n \ n");
+		printf ("VUELO: MIAL% d \ n \ n", vuelo);
+		printf ("\ n \ n");
+        printf ("1. Reservar su asiento \ n");
+        printf ("2. Ver asientos disponibles \ n");
+        // printf ("3. Ver sugerencia de asientos \ n");
+        printf ("3. Ver Resumen \ n");
+        printf ("4. Salir \ n");
+        printf ("\ n \ n");
+        
+        printf ("Ingrese una opción \ n");
+        scanf ("% d", & opcion);
+        interruptor (opción) {
+        	caso 1:
+{
+    sistema ("@ cls || clear");
+}
+            // PRUEBAS DEL MENU: SUMA DE NUMEROS PARA LA OPCION 1
+            printf ("Ingrese un valor \ n");
+            scanf ("% d", & uno);
+            printf ("Ingrese el segundo valor \ n");
+            scanf ("% d", & dos);
+            printf ("La suma de% dy% d es:% d", uno, dos, uno + dos);
+            getch ();
+            descanso;
+            
+            
+            caso 2:
+{
+    sistema ("@ cls || clear");
+}
+            // PRUEBAS DEL MENU: MULTIPLICACION DE NUMEROS PARA LA OPCION 2
+            printf ("Ingrese un valor \ n");
+            scanf ("% d", & uno);
+            printf ("Ingrese el segundo valor \ n");
+            scanf ("% d", & dos);
+            printf ("La multiplicación de% dy% d es:% d", uno, dos, uno * dos);
+            getch ();
+            descanso;
+            
+            
+        	caso 3:
+{
+    sistema ("@ cls || clear");
+}
+            // PRUEBAS DEL MENU: RESTABLECIMIENTO DE NÚMEROS PARA LA OPCIÓN 3
+            printf ("Ingrese un valor \ n");
+            scanf ("% d", & uno);
+            printf ("Ingrese el segundo valor \ n");
+scanf ("% d", & dos);
+            printf ("La resta de% dy% d es:% d", uno, dos, uno-dos);
+            getch ();
+            descanso;
+            
+            caso 4:
+            	descanso;
+            
+		} 
+        
+	} while (¡opción! = 4);
+		devuelve 0;
+	 
+	 
+}
