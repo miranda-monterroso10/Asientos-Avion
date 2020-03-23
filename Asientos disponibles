@@ -1,0 +1,123 @@
+// PROYECTO AVION
+// Agregamos algunas indicaciones para el operario. Además se rellenará la matriz y disponibilidad.
+#include <string.h>
+#include <stdio.h>
+#include <stdlib.h>
+int matriz_reservados [6] [6];
+char letras [6] = {'A', 'B', 'C', 'D', 'E'};
+char asiento [2] = "";
+int fila, columna;
+int b;
+int contador = 0;
+asientos_disponibles vacíos (int matriz_asientos [6] [6]);
+void reservar_asiento (int matriz_asientos [6] [6], char * letras [6]);
+nulo clsc (nulo);
+int main (nulo) {
+    int i, j;
+    para (i = 0; i <6; i ++) {
+        para (j = 0; j <6; j ++) {
+            matriz_reservados [i] [j] = 0;
+        }
+    }
+    char n_vuelo [5];
+    int opcion;
+    comienzo:
+        printf ("Bienvenido!");
+        printf ("Ingrese el numero de vuelo:");
+        scanf ("% s", & n_vuelo);
+        if (strlen (n_vuelo) == 5) {
+            menú:
+                clsc ();
+                printf ("Bienvenido al menú de reservación del vuelo MIAL_% s \ n", n_vuelo);
+                printf ("\ nSeleccione una opcion: \ n");
+                printf ("1. Reservar asiento \ n");
+    printf ("2. Ver asientos disponibles \ n");
+    printf ("3. Ver Resumen \ n");
+    printf ("4. Salir \ n");
+    
+    printf ("\ n \ n \ n");
+    printf ("Opción: \ n");
+                scanf ("% d", & opcion);
+                printf ("\ n");
+               
+                if (opción == 1) {
+                 scanf ("% c", & b);
+                    clsc ();
+                   
+                    reserva:
+                        printf ("Reserva de asientos \ n \ n \ n");
+                        printf ("Ingrese el asiento que desea reservar (0 para regresar): (Ingrese una opción entre AF, 1-6)");
+                        scanf ("% s", & asiento);
+                        scanf ("% c", & b);
+                       
+                        if (asiento == "0") {
+                            ir al menú;
+                        }
+                        if (strlen (asiento) == 2) {
+                         columna = asiento [0] - 65;
+                            fila = asiento [1] - 49;
+                           
+                            if (fila> 5 || columna> 5) {
+                                printf ("Asiento invalido \ n");
+                                ir a reserva;
+                            } else if (matriz_reservados [columna] [fila] == 0) {
+                                matriz_reservados [columna] [fila] = 1;
+                                contador ++;
+                                printf ("Asiento% s reservado exitosamente! \ n \ n", asiento);
+                                printf ("\ n \ n");
+                                printf ("Presione enter para regresar");
+                                scanf ("% c", & b);
+                                ir al menú;
+                            } más {
+                                clsc ();
+                                printf ("El asiento solicitado y esta reservado. Seleccione otro asiento \ n \ n");
+                                ir a reserva;
+                            }
+                        } más {
+                            ir a reserva;
+                        }
+                          
+                       
+                } else if (opción == 2) {
+                 scanf ("% c", & b);
+                    disponibilidad:
+                        printf ("Asientos disponibles = o \ n");
+                        printf ("Asientos ocupados = x \ n");
+                        printf ("Listado de Asientos \ n");
+                       
+                        para (i = 1; i <7; i ++) {
+                            printf ("% d", i);
+                        }
+                        printf ("\ n");
+                       
+                        para (i = 0; i <6; i ++) {
+                            printf ("% c", i + 65);
+                            para (j = 0; j <6; j ++) {
+                                if (matriz_reservados [i] [j] == 1) {
+                                    printf ("[x]");
+                                } más {
+                                    printf ("[o]");
+                                }
+                            }
+                            printf ("\ n");
+                        }
+                        printf ("Presione enter para regresar");
+                        scanf ("% c", & b);
+                   
+                        ir al menú;
+                } else if (opción == 3) {
+                   
+                        ir al menú;
+                } else if (opción == 4) {
+                    devuelve 0;
+                } más {
+                    ir al menú;
+                }
+        } más {
+            ir a inicio;
+        }
+   
+}
+vacío clsc (vacío) {
+    sistema ("@ cls || clear");
+}
